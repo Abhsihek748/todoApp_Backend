@@ -1,3 +1,6 @@
 - Project should not contain node_modules
 - Share postman collection for your apis, I am not able to access  
 - Add inline comments to your code
+- Steps for how to setup project in local machine is missing
+- Some dependencies in package.json are development only, you need to categorise them separatly
+- Why app.use(cors()) is required?
