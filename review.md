@@ -1,0 +1,1 @@
+- Project should not contain node_modules
