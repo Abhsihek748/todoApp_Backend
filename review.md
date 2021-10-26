@@ -4,3 +4,4 @@
 - Steps for how to setup project in local machine is missing
 - Some dependencies in package.json are development only, you need to categorise them separatly
 - Why app.use(cors()) is required?
+- Start script missing in package.json
