@@ -1,4 +1,7 @@
 # todoApp_Backend
+
+deploy : https://floating-ridge-60992.herokuapp.com/
+
 this is the backend repo for todo app . 
 here i have used postgres db
 
