@@ -1,6 +1,8 @@
-const pool = require('../db') ;
+const pool = require('../db') ; // database connection
+
+// this is the factory file and here the function for CRUD operations are written and the table variable is used to decide which table to use crud operation.
  
-function createElement(table){
+function createElement(table){                   // create element in table
     return async(req,res)=>{
       try{
        const {description} = req.body ;
@@ -14,7 +16,7 @@ function createElement(table){
     }
 }
 
-function getElements(table){
+function getElements(table){         // get all data from the table
     return async(req,res)=>{
         try{
          let allTodo = table === "todo"?await  pool.query("SELECT* FROM todo ")
@@ -27,7 +29,7 @@ function getElements(table){
       }
   }
 
-function getElement(table){
+function getElement(table){        // get specified data feom table
     return async(req,res)=>{
         try{
          const id = req.params.id ;
@@ -41,7 +43,7 @@ function getElement(table){
       }
   }
 
-  function updateElement(table){
+  function updateElement(table){       // update speciific data in the table
     return async(req,res)=>{
         try{
          const id = req.params.id ;
@@ -56,7 +58,7 @@ function getElement(table){
       }
   }
 
-  function deleteElement(table){
+  function deleteElement(table){                    // delete specified data in the table
     return async(req,res)=>{
         try{
          const id = req.params.id ;
@@ -79,6 +81,8 @@ function getElement(table){
         }
       } 
   }
+
+   // exporting the functions .
 
   module.exports.getElement = getElement;
   module.exports.getElements = getElements;
